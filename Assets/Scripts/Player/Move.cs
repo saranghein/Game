@@ -28,7 +28,7 @@ public class Move : MonoBehaviour
         {
             inputRight = true;
             transform.localScale = new Vector3(-1, 1, 1);
-            transform.Translate(Vector3.right * Time.deltaTime);
+            transform.Translate(Vector3.right *status.moveSpeed* Time.deltaTime);
             animator.SetBool("moving", true);
             
         }
@@ -36,7 +36,7 @@ public class Move : MonoBehaviour
         {
             inputLeft = true;
             transform.localScale = new Vector3(1, 1, 1);
-            transform.Translate(Vector3.left * Time.deltaTime);
+            transform.Translate(Vector3.left * status.moveSpeed* Time.deltaTime);
 
             animator.SetBool("moving", true);
         }
@@ -44,7 +44,7 @@ public class Move : MonoBehaviour
         {
             //inputLeft = true;
             //transform.localScale = new Vector3(1, 1, 1);
-            transform.Translate(Vector3.up * Time.deltaTime);
+            transform.Translate(Vector3.up * status.moveSpeed*Time.deltaTime);
 
             animator.SetBool("moving", true);
         }
@@ -52,7 +52,7 @@ public class Move : MonoBehaviour
         {
             //inputLeft = true;
             //transform.localScale = new Vector3(1, 1, 1);
-            transform.Translate(Vector3.down * Time.deltaTime);
+            transform.Translate(Vector3.down * status.moveSpeed*Time.deltaTime);
 
             animator.SetBool("moving", true);
         }

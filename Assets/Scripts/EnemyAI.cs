@@ -55,9 +55,12 @@ public class EnemyAI : MonoBehaviour
 
     void MoveToTarget()
     {
-        float dir = target.position.x - transform.position.x;
-        dir = (dir < 0) ? -1 : 1;
-        transform.Translate(new Vector2(dir, 0) * status.moveSpeed * Time.deltaTime);
+        //float dir = target.position.x - transform.position.x;
+        //Vector2 dir = (target.position.x - transform.position.x, target.position.y - transform.position.y);
+        float dirx = target.position.x - transform.position.x;
+        float diry = target.position.y - transform.position.y;
+        dirx = (dirx < 0) ? -1 : 1;
+        transform.Translate(new Vector2(dirx, diry) * status.moveSpeed * Time.deltaTime);
         animator.SetBool("moving", true);
     }
 
