@@ -17,7 +17,7 @@ public class Attack : MonoBehaviour
     {
         if (unitMgr.died) return;
 
-        if (Input.GetKey(KeyCode.A) &&
+        if (Input.GetAxis("Fire1")==1 &&
             !animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
             animator.SetTrigger("attack");

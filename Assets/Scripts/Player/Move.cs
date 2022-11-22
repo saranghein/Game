@@ -61,29 +61,6 @@ public class Move : MonoBehaviour
 
     }
 
-    private void FixedUpdate()
-    {
-        if (unitMgr.died) return;
-
-        if (inputRight)
-        {
-            inputRight = false;
-            //transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
-            //rigid2D.MovePosition(rigid2D.position + Vector2.right * moveSpeed * Time.deltaTime);
-            //rigid2D.velocity = new Vector2(moveSpeed, rigid2D.velocity.y);
-            rigid2D.AddForce(Vector2.right * status.moveSpeed);
-        }
-        if (inputLeft)
-        {
-            inputLeft = false;
-            //transform.Translate(Vector3.left * moveSpeed * Time.deltaTime);
-            //rigid2D.MovePosition(rigid2D.position + Vector2.left * moveSpeed * Time.deltaTime);
-            //rigid2D.velocity = new Vector2(-moveSpeed, rigid2D.velocity.y);
-            rigid2D.AddForce(Vector2.left * status.moveSpeed);
-        }
-        if (rigid2D.velocity.x >= 1.5f) rigid2D.velocity = new Vector2(1.5f, rigid2D.velocity.y);
-        else if (rigid2D.velocity.x <= -1.5f) rigid2D.velocity = new Vector2(-1.5f, rigid2D.velocity.y);
-    }
-
+ 
     
 }
