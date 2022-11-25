@@ -1,4 +1,3 @@
-# Game
 # Zombie Survival(좀비 서바이벌)
 
 ## Game Introduction(게임 소개)
