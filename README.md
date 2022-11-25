@@ -176,19 +176,16 @@
 - **Character List**
     
     
-    | Player | 체력, 배고픔, 목마름, Enemy공격
-    체력이 0이면 죽음 , 배고픔이나 목마름 수치가 0이면 체력이 감소 |
+    | Player | 체력, 배고픔, 목마름, Enemy공격,체력이 0이면 죽음 , 배고픔이나 목마름 수치가 0이면 체력이 감소 |
     | --- | --- |
     | Enemy | 체력, Player공격 |
 - **Scripts**
     
     
-    | UnitMgr.cs | 전체적인 Character control
-    (몬스터 체력감소, 코루틴을 통한 Character의 죽음 시 행동 구현 등) |
+    | UnitMgr.cs | 전체적인 Character control(몬스터 체력감소, 코루틴을 통한 Character의 죽음 시 행동 구현 등) |
     | --- | --- |
     | UnitCode.cs | UnitMgr가 Control 할 대상(Player, Enemy) 설정 |
-    | Status.cs | Player, Enemy의 스테이터스 설정
-    (attack damage, HP, Hunger 등) |
+    | Status.cs | Player, Enemy의 스테이터스 설정(attack damage, HP, Hunger 등) |
     | Move.cs | Player의 움직임 구현 |
     | EnemyAI.cs | Enemy의 움직임, Player에 대한 공격 구현과 Player체력감소 |
     | MonsterSpawner.cs | 몬스터 스폰구현 |
